@@ -1,47 +1,33 @@
-<script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
-</script>
-
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
+  <main class="mx-auto max-w-7xl px-4 pb-12 sm:px-6 lg:px-8">
+    <LowerThirdRow
+      v-for="(lowerThird, index) in lowerThirds"
+      :key="lowerThird.id"
+      :title="lowerThird.label || String(index)"
+      :name="lowerThird.line_one"
+      :role="lowerThird.line_two"
+      @update:name="
+        updateLowerThird({ lowerThirdId: lowerThird.id, attribute: 'line_one', text: $event })
+      "
+      @update:role="
+        updateLowerThird({ lowerThirdId: lowerThird.id, attribute: 'line_two', text: $event })
+      "
+    />
+    <SimpleAlert
+      :open="!isConnected"
+      title="Keine Verbindung"
+      text="Du scheinst keine Verbindung zum H2R Server zu haben. Bitte überprüfe deine Netzwerkverbindung."
+      button-label="Seite neu laden"
+      @button-click="reload"
+    />
   </main>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-}
+<script setup lang="ts">
+import LowerThirdRow from './components/LowerThirdRow.vue'
+import { lowerThirds, isConnected } from './api/apiData'
+import { updateLowerThird } from './api/updateLowerThird'
+import SimpleAlert from './components/SimpleAlert.vue'
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
-</style>
+const reload = () => location.reload()
+</script>
