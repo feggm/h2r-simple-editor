@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/feggm/h2r-simple-editor/compare/v1.0.0...v1.0.1) (2023-04-21)
+
+
+### Bug Fixes
+
+* correct base path for github pages in ci ([a1a3db9](https://github.com/feggm/h2r-simple-editor/commit/a1a3db96c1299b8ca69c9c237167bae4d6238ae9))
+
 ## 1.0.0 (2023-04-21)
 
 
