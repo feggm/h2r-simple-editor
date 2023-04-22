@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/feggm/h2r-simple-editor/compare/v1.0.1...v1.0.2) (2023-04-22)
+
+
+### Bug Fixes
+
+* move github pages to custom domain ([b97d608](https://github.com/feggm/h2r-simple-editor/commit/b97d6086a6c22f8e2fee5e8bb5bb0fdecdd40224))
+
 ## [1.0.1](https://github.com/feggm/h2r-simple-editor/compare/v1.0.0...v1.0.1) (2023-04-21)
 
 
