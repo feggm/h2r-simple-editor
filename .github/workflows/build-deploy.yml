@@ -22,7 +22,7 @@ jobs:
       - name: Install 📦
         run: pnpm i
       - name: Build 🔨
-        run: pnpm build
+        run: pnpm build-only --base=/h2r-simple-editor/
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
