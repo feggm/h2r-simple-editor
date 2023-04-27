@@ -1,7 +1,7 @@
 import axios from 'axios'
-import { getBaseDomain } from './apiConfig'
+import { getBaseDomain, getIsSecure } from './apiConfig'
 
 export const client = axios.create({
-  baseURL: `http://${getBaseDomain()}`,
+  baseURL: `http${getIsSecure() ? 's' : ''}://${getBaseDomain()}`,
   headers: { 'content-type': 'application/x-www-form-urlencoded' }
 })

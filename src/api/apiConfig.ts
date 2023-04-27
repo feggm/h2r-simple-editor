@@ -4,3 +4,4 @@ const getQueryParam = (queryParamName: string) => {
 }
 
 export const getBaseDomain = () => getQueryParam('baseDomain') || ''
+export const getIsSecure = () => window.location.protocol === 'https:'

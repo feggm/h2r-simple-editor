@@ -1,9 +1,9 @@
 import { io } from 'socket.io-client'
-import { getBaseDomain } from './apiConfig'
+import { getBaseDomain, getIsSecure } from './apiConfig'
 import mitt from 'mitt'
 import type { UpdateFrontendPayload } from './UpdateFrontendPayload'
 
-const socket = io(`ws://${getBaseDomain()}`)
+const socket = io(`ws${getIsSecure() ? 's' : ''}://${getBaseDomain()}`)
 
 export const socketEvents = mitt<{
   updateFrontend: UpdateFrontendPayload
