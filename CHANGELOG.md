@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.4](https://github.com/feggm/h2r-simple-editor/compare/v1.0.3...v1.0.4) (2023-04-27)
+
+
+### Bug Fixes
+
+* move github pages to media-github.local.feggm.de ([93f793b](https://github.com/feggm/h2r-simple-editor/commit/93f793b57b20ea006a63b7ff20f574dcb69b7dde))
+
 ## [1.0.3](https://github.com/feggm/h2r-simple-editor/compare/v1.0.2...v1.0.3) (2023-04-22)
 
 
