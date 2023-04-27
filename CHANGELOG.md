@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/feggm/h2r-simple-editor/compare/v1.0.4...v1.1.0) (2023-04-27)
+
+
+### Features
+
+* set protocol of backend connection based on window.location.protocol ([2792d96](https://github.com/feggm/h2r-simple-editor/commit/2792d965b398bb8cf4e4ea0f19cf6e0b742baf18))
+
 ## [1.0.4](https://github.com/feggm/h2r-simple-editor/compare/v1.0.3...v1.0.4) (2023-04-27)
 
 
